@@ -5,6 +5,24 @@
     <title>Google</title>
   </head>
   <style>
+	#apps-img{
+	  background: url('https://ssl.gstatic.com/gb/images/i1_1967ca6a.png') -135px -40px;
+	  display: inline-block;
+	  width: 20px;
+	  height: 20px;
+	  vertical-align: top;
+	}
+	#search-img{
+	  background: url('https://ssl.gstatic.com/gb/images/i1_1967ca6a.png') -250px -35px;
+	  display: block;
+	  width: 20px;
+	  height: 20px;
+	  position: relative;
+	  top: 34px;
+	  left: 10px;
+	  z-index: 10;
+	  opacity: 0.5;
+	}
 	.header-div{
 	  position: relative;
 	  width: 100%;
@@ -12,16 +30,14 @@
 	}
 	.left-header-div{
 	  position: absolute;
-	  width: 25%;
+	  width: auto;
 	  height: 100%;
-	  top: 0;
 	  left: 0;
 	}
 	.right-header-div{
 	  position: absolute;
 	  width: auto;
 	  height: 100%;
-	  top: 0;
 	  right: 0;
 	}
 	.top-a{
@@ -33,11 +49,9 @@
 	  margin: 0px 5px;
 	  padding: 5px;
 	}
-	.top-a-left{
-	  left: 0;
-	}
-	.top-a-right{
-	  right: 0;
+	.signin{
+	  background-color: #4285f4;
+	  color: white;
 	}
 	.img-div{
 	  position: relative;
@@ -54,6 +68,13 @@
 	  position: relative;
 	  width: 100%;
 	  height: 75px;
+	}
+	.searchbar-container{
+	  position: absolute;
+	  width: 540px;
+	  height: 45px;
+	  left: 50%;
+	  transform: translate(-50%, 0);
 	}
 	.searchbar{
 	  position: absolute;
@@ -115,14 +136,14 @@
   <body>
     <div class="header-div">
 	  <div class="left-header-div">
-		<a class="top-a top-a-left" href="">About</a>
-		<a class="top-a top-a-left" href="">Store</a>
+		<a class="top-a" href="">About</a>
+		<a class="top-a" href="">Store</a>
 	  </div>
 	  <div class="right-header-div">
-		<a class="top-a top-a-right" href="">Gmail</a>
-		<a class="top-a top-a-right" href="">Images</a>
-		<a class="top-a top-a-right" href="">grid</a>
-		<a class="top-a top-a-right" href="">Sign In</a>
+		<a class="top-a" href="">Gmail</a>
+		<a class="top-a" href="">Images</a>
+		<a id="apps-img" class="top-a" href=""></a>
+		<a class="top-a signin" href="">Sign In</a>
 	  </div>
 	</div>
 	<div class="img-div">
@@ -131,7 +152,10 @@
      	   alt="Google homepage image">
 	</div>
 	<div class="searchbar-div">
-	  <input class="searchbar" type="text">
+	  <div class="searchbar-container">
+		<div id="search-img"></div>
+	  	<input class="searchbar" type="text">
+	  </div>
 	</div>
 	<div class="button-div">
 	  <button class="searchbuttons">Google Search</button>
